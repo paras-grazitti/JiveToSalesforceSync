@@ -1,0 +1,9 @@
+{
+	"clientUrl": "https://connectors.grazitti.com",
+	"port": "1600",
+	"development" : true,
+	"extensionInfo" : {
+		"name"		: "Data Sync",
+		"description": "DataSyncing with Salesforce"
+	}
+}

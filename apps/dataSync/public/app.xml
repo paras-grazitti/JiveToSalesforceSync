@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Module specificationVersion="1">
+  <ModulePrefs title="Data Syncing App"
+               description="Data Syncing between Jive And Salesforce "
+               author="Jive Developers"
+               author_affiliation="Jive Software (Open Source)"
+               author_email="jivedev@jivesoftware.com">
+
+   <!-- Commonly used features -->
+   <Require feature="dynamic-height" />
+   <Require feature="jive-core-v2" />
+   <Require feature="jquery-1.6" />
+   <Require feature="osapi"/>
+   <Require feature="settitle"/>
+   <Require feature="views" />
+   <Require feature="jive-core-v3" />
+   <Require feature="embedded-experiences" />
+	  <Require feature="actions">
+		    <Param name="action-contributions">
+   			<![CDATA[
+           <!--
+           #### UNCOMMENT THIS TO HIDE THE APP FROM THE APPS MENU IN THE NAV BAR ####
+           <action id="example.app.launcherlessapp"
+                   path="jive/apps/launcher?filter=false()"/>
+           -->
+
+           <action id="example.app.places.all.tab"
+                   path="jive/tabs/places/*"
+                   label="Example (All Places)"
+                   view="place-all-tab"/>
+
+           <action id="example.app.places.project.tab"
+                   path="jive/tabs/places/project"
+                   label="Example (Project)"
+                   view="place-project-tab"/>
+
+           <action id="example.app.places.space.tab"
+                   path="jive/tabs/places/space"
+                   label="Example (Space)"
+                   view="place-space-tab"/>
+
+           <action id="example.app.places.group.tab"
+                   path="jive/tabs/places/group"
+                   label="Example (Group)"
+                   view="place-group-tab"/>
+
+           <action id="example.app.actions.tab"
+                   path="jive/tabs/actions"
+                   label="Example (Actions)"
+                   view="actions-tab"/>
+
+           <action id="example.app.profile.tab"
+                   path="jive/tabs/profile"
+                   label="Example (Profile)"
+                   view="profile-tab"/>
+
+           <action id="example.app.content.all.action"
+                   path="jive/actions/content/*"
+                   label="Example (All Content)"
+                   view="content-action-all"/>
+
+           <action id="example.app.content.document.action"
+                   path="jive/actions/content/document"
+                   label="Example (Document)"
+                   view="content-action-document"/>
+
+           <action id="example.app.content.discussion.action"
+                   path="jive/actions/content/discussion"
+                   label="Example (Discussion)"
+                   view="content-action-discussion"/>
+
+           <action id="example.app.content.question.action"
+                   path="jive/actions/content/question"
+                   label="Example (Question)"
+                   view="content-action-question"/>
+
+           <action id="example.app.content.document.binary.action"
+                   path="jive/actions/content/document/binary/*"
+                   label="Example (Document Binary)"
+                   view="content-action-document-binary"/>
+
+           <action id="example.app.content.blogpost.action"
+                   path="jive/actions/content/blogpost"
+                   label="Example (Blog Post)"
+                   view="content-action-blogpost"/>
+
+           <action id="example.app.content.poll.action"
+                   path="jive/actions/content/poll"
+                   label="Example (Poll)"
+                   view="content-action-poll"/>
+
+           <action id="example.app.content.video.action"
+                   path="jive/actions/content/video"
+                   label="Example (Video)"
+                   view="content-action-video"/>
+
+           <action id="example.app.content.idea.action"
+                   path="jive/actions/content/idea"
+                   label="Example (Idea)"
+                   view="content-action-idea"/>
+
+           <action id="example.app.content.event.action"
+                   path="jive/actions/content/event"
+                   label="Example (Event)"
+                   view="content-action-event"/>
+
+           <action id="example.app.createmenu.action"
+                   path="jive/actions/navmenu"
+                   label="Example (Create Menu)"
+                   view="createmenu-action"/>
+
+           <action id="example.app.places.all.action"
+                   path="jive/actions/places/*"
+                   label="Example (All Places)"
+                   view="place-all-action"/>
+
+           <action id="example.app.places.project.action"
+                   path="jive/actions/places/project"
+                   label="Example (Project)"
+                   view="place-project-action"/>
+
+           <action id="example.app.places.space.action"
+                   path="jive/actions/places/space"
+                   label="Example (Space)"
+                   view="place-space-action"/>
+
+           <action id="example.app.places.group.action"
+                   path="jive/actions/places/group"
+                   label="Example (Group)"
+                   view="place-group-action"/>
+
+           <action id="example.app.places.settings.all.action"
+                   path="jive/settings/places/*"
+                   label="Example (All Places)"
+                   view="place-settings-all-action"/>
+
+           <action id="example.app.places.settings.project.action"
+                   path="jive/settings/places/project"
+                   label="Example (Project)"
+                   view="place-settings-project-action"/>
+
+           <action id="example.app.places.settings.space.action"
+                   path="jive/settings/places/space"
+                   label="Example (Space)"
+                   view="place-settings-space-action"/>
+
+           <action id="example.app.places.settings.group.action"
+                   path="jive/settings/places/group"
+                   label="Example (Group)"
+                   view="place-settings-group-action"/>
+
+           <action id="example.app.rte.action"
+                   path="jive/actions/rte"
+                   label="Example (!app)"
+                   view="rte-action"
+                   icon="images/icon16.png"/>
+
+   				<action id="example.app.profile.navbar.site"
+   						path="jive/actions/profile"
+   						label="Example (Profile NavBar Site)"
+   						url="https://developer.jivesoftware.com"
+   						icon="images/icon16.png"
+   						windowSpec="left=40,top=40,width=500,height=500,toolbar=1,resizable=0"/>
+
+           <action id="example.app.profile.navbar.email"
+               path="jive/actions/profile"
+               label="Example (Profile NavBar Email)"
+               url="example:{context.email}"
+               icon="images/icon16.png" />
+
+           <action id="example.app.profile.navbar.phone"
+               path="jive/actions/profile"
+               label="Example (Profile NavBar Phone)"
+               url="tel:{context.profileFields.__AP_phoneNumber__}"
+               icon="images/icon16.png" />
+
+   			]]>
+		</Param>
+	</Require>
+
+   <Link rel="Icon"       href="images/icon16.png" />
+   <Link rel="MediumIcon" href="images/icon48.png" />
+   <Link rel="LargeIcon"  href="images/icon128.png" />
+
+ </ModulePrefs>
+
+ <Content type="html"
+          view="home,canvas,ext-object,place-all-tab,place-space-tab,place-group-tab,place-project-tab,actions-tab,profile-tab,rte-action,content-action-all,content-action-document,content-action-discussion,content-action-question,content-action-document-binary,content-action-blogpost,content-action-poll,content-action-video,content-action-idea,content-action-event,createmenu-action,place-all-action,place-space-action,place-group-action,place-project-action,place-settings-all-action,place-settings-space-action,place-settings-group-action,place-settings-project-action"
+          href="index.html"
+          preferred_height="800" />
+
+</Module>

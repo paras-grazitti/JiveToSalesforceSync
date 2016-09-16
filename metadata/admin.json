@@ -1,0 +1,34 @@
+{
+  "loginUrl": "https://login.salesforce.com/",
+  "integrationUser": "",
+  "APIkey": "",
+  "communityUrl": "",
+  "communityUser": "",
+  "communityPass": "",
+  "salesforce": {
+    "clientSecret": "",
+    "clientId": "",
+    "redirect_uri": "https://connectors.grazitti.com:1600/dataSync/sfOauth"
+  },
+  "admin": {
+    "accessToken": "",
+    "refreshToken": "",
+    "instanceUrl": "",
+    "oauth2": {
+      "loginUrl": "",
+      "authzServiceUrl": "",
+      "tokenServiceUrl": "",
+      "revokeServiceUrl": "",
+      "clientId": "",
+      "clientSecret": "",
+      "redirectUri": "https://connectors.grazitti.com:1600/dataSync/sfOauth",
+      "_transport": {}
+    },
+    "contactId": null,
+    "userInfo": {
+      "id": "",
+      "organizationId": "",
+      "url": ""
+    }
+  }
+}

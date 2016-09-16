@@ -1,0 +1,14 @@
+{
+    "integrationUser": {
+        "systemAdmin": false
+    },
+    "osapps": [
+        {
+            "id": "aa3bdcc2-b5f9-4204-bcec-2329e5be1dc6",
+            "name": " Reference App",
+            "appPath": "aa3bdcc2b5f94204bcec2329e5be1dc6",
+            "url": "%serviceURL%/osapp/dataSync/app.xml?ts=1472020210925"
+
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+{
+  "jiveExtension": {
+    "id": "jiveExtension",
+    "uuid": "a40d17ea-a909-425c-a9c6-3e2051d79c10",
+    "name": "Data Sync",
+    "description": "DataSyncing with Salesforce"
+  }
+}
